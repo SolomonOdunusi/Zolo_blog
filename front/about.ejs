@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./components/head.ejs')%>
+<body>
+
+    <% const name = 'Solomon Odunusi' %>
+    <%- include('./components/navbar.ejs')%>
+    <div class="about">
+        <h1>About Zolo Blog</h1>
+
+        <p>My name is <%= name.toUpperCase() %>. I am the creator of this node js blog app.</p>
+        <p>Welcome to Zolo Blog, a digital haven where creativity meets simplicity, and every word finds its place in the vast landscape of the internet. 🌐✨</p>
+    
+
+        <h3 style="font-size: 30px;">Our Vision</h3>
+        <p>At Zolo Blog, we believe in the power of storytelling. We envision a platform that goes beyond the ordinary, where bloggers, writers, and creatives can seamlessly weave their narratives into the tapestry of the online world. Our mission is to provide a space where every idea, every perspective, and every voice matters.</p>
+    </div>
+    <%- include('./components/foot.ejs')%>
+</body>
+</html>

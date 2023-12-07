@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./components/head.ejs')%>
+<body>
+    <%- include('./components/navbar.ejs')%>
+    <!-- <h1 class="blog-title">Zolo Blog</h1> -->
+
+    <% if (blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+            <a class="blog" href="/blogs/<%= blog._id %>">
+                <h2><%= blog.title %></h2>
+                <p>Written by <%= blog.author %></p>
+                <h4><%= blog.snippet %></h4>
+            </a>
+        <% }) %>
+    <% } else { %>
+        <p>No blogs to show</p>
+    <% } %>
+    <%- include('./components/foot.ejs')%>
+</body>
+</html>

@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Roboto/Roboto-Regular.ttf') format('truetype');
+    /* Add other font formats if needed */
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #333;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    justify-content: space-between; /* Added to create space between elements */
+}
+.navbar h1 {
+    color: rgb(252, 69, 2);
+    text-align: center;
+    margin: 20px 20px 0 20px; /* Reset margin to center the h1 */
+    font-size: 2rem; /* Added to make the h1 smaller */
+    font-style: italic;
+}
+
+.navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* .navbar a:hover {
+    color: rgb(252, 69, 2);
+    text-decoration: none;
+    border-bottom: 1.5px solid rgb(252, 69, 2);
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+
+    /* Additional animation for a bouncing border */
+    /* animation: bounceBorder 0.5s ease-in-out; */
+/* } */
+
+/* Define the bounceBorder animation */
+/* @keyframes bounceBorder {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scaleY(1);
+    }
+    40% {
+        transform: scaleY(1.5);
+    }
+    60% {
+        transform: scaleY(1.4);
+    } */
+/* } */ 
+.navbar .links a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transform-origin: bottom right;
+    transition: transform 0.9s ease-in-out, background-color 0.9s ease-in-out;
+}
+
+.navbar .links a:hover {
+    color: rgb(252, 69, 2);
+}
+
+.navbar .links a:hover::before {
+    transform: scaleX(0);
+    background-color: rgb(252, 69, 2);
+}
+
+.zolo {
+    width: 200px;
+    height: 50px;
+}
+
+.blog-title {
+    text-align: center;
+    margin: 20px;
+}
+
+/* .blog {
+    display: block;
+    max-width: 600px;
+    margin: 20px auto;
+    border-bottom: 1px solid #e3e2e2;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.blog::before {
+    content: '';
+    display: block;
+    border-left: 6px solid rgb(252, 69, 2);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+} */
+
+
+.blog {
+    display: block;
+    max-width: 600px;
+    margin: 20px auto;
+    border-bottom: 1px solid #e3e2e2;
+    padding: 20px;
+    text-decoration: none;
+    border-left: 6px solid rgb(252, 69, 2);
+    transition: border-left 0.3s ease-in-out;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.018);
+}
+
+
+.blog:hover {
+    border-left: 18px solid rgb(252, 69, 2);
+    transition: border-left 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 2px 1px 10px #333;
+}
+
+.blog h2 {
+    color: rgb(252, 69, 2);
+}
+
+.blog p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.blog h4 {
+    margin: 20px 0;
+}
+
+.about {
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20px;
+}
+
+.about h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #f2f2f2;
+}
+.create {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+
+    /* background-color: rgb(252, 209, 194); */
+}
+
+.create label {
+    font-size: 20px;
+    color: rgb(252, 69, 2);
+    margin-bottom: 8px;
+    margin-top: 254px;
+
+}
+.create h2 {
+    font-size: 30px;
+    color: rgb(252, 69, 2);
+    margin-bottom: 16px;
+}
+
+.create input, .create textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(252, 69, 2);
+    border-radius: 4px;
+    resize: none;
+}
+.create textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(252, 69, 2);
+    border-radius: 4px;
+    height: 100px;
+
+}
+.create_btn {
+    background-color: rgb(252, 69, 2);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.details {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20px;
+    border-top: 6px solid rgb(252, 69, 2);
+}
+
+.details h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.details p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.details .delete,
+.details .edit {
+    background-color: rgb(252, 69, 2);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+}
+
+.details .delete {
+    right: 10px;
+}
+
+.details .edit {
+    right: 110px;
+}
+
+
