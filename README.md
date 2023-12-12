@@ -19,11 +19,11 @@ Zolo Blog is a minimalistic and smooth blogging application built with Node.js, 
 ## Screenshots
 
 ### Home Page
-![Alt text](<Zolo Blog _ Blogs and 7 more pages - Personal - Microsoft​ Edge 12_7_2023 12_17_50 PM.png>)
+![Alt text](<./public/Shot-1.png>)
 
 ### Create Page
 
-![Alt text](<Zolo Blog _ Blogs and 7 more pages - Personal - Microsoft​ Edge 12_7_2023 12_18_06 PM.png>)
+![Alt text](<./public/Shot-2.png>)
 
 ## Technologies Used
 

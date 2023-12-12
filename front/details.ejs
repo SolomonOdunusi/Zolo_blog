@@ -1,3 +1,5 @@
+<!-- views/details.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./components/head.ejs')%>
@@ -9,15 +11,19 @@
         <div class="content">
             <p><%= blog.body %></p>
         </div>
-        <a href="/blogs/<%= blog._id %>/edit" class="edit">Edit</a>
-        <!-- <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
-            <button class="delete">Delete</button> -->
+        <a href="/blogs/<%= blog._id %>/edit" class="edit" id="editBtn">Edit</a>
         <a class="delete" href="delete" data-doc="<%= blog._id %>">Delete</a>
-
     </div>
     <%- include('./components/foot.ejs')%>
 
     <script>
+        const editBtn = document.getElementById('editBtn');
+
+        editBtn.addEventListener('click', () => {
+            const blogId = editBtn.getAttribute('data-doc');
+            window.location.href = `/blogs/${blogId}/edit`;
+        });
+
         const deleteBtn = document.querySelector('a.delete');
 
         deleteBtn.addEventListener('click', (e) => {
@@ -25,14 +31,12 @@
             fetch(endpoint, {
                 method: 'DELETE'
             })
-            .then((resp) => {
-                resp.json()
-            })
+            .then((resp) => resp.json())
             .then((data) => {
-                window.location.href = '/blogs'
+                window.location.href = '/blogs';
             })
-            .catch(err => console.log(err))
-        })
+            .catch(err => console.log(err));
+        });
     </script>
 </body>
 </html>

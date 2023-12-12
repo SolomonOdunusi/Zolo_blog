@@ -1,0 +1,45 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./components/head') %>
+<body>
+    <%- include('./components/navbar')%>
+    <div class="edit">
+    
+    <h2>Edit Blog</h2>
+
+    <form id="editForm" action="/blogs/<%= blog._id %>" method="POST">
+        <!-- Include a hidden input field to send the request as a PUT request -->
+        <input type="hidden" name="_method" value="PUT">
+
+        <!-- Your form fields go here -->
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="<%= blog.title %>">
+
+        <label for="content">Content</label>
+        <textarea id="content" name="content"><%= blog.body %></textarea>
+
+        <button type="submit" class="edit_btn" id="saveChangesBtn">Save Changes</button>
+    </form>
+    </div>
+    <%- include('./components/foot') %>
+    <script>
+        const saveChangesBtn = document.getElementById('saveChangesBtn');
+        const editForm = document.getElementById('editForm');
+
+        saveChangesBtn.addEventListener('click', () => {
+            const formData = new FormData(editForm);
+
+            fetch(editForm.action, {
+                method: 'POST', // Use POST method since we're using the hidden "_method" field for PUT
+                body: formData
+            })
+            .then((resp) => resp.json())
+            .then((data) => {
+                window.location.href = `/blogs/${blog._id}`;
+            })
+            .catch(err => console.log(err));
+        });
+    </script>
+</body>
+</html>
